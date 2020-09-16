@@ -1,0 +1,138 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+$theme-colors: (
+  'primary': #8f4dc7,
+  'dark': #111,
+);
+
+$body-color: #eee;
+$body-bg: #333;
+
+$navbar-light-color: #fff;
+$navbar-light-brand-color: #fff;
+$navbar-light-hover-color: #fff;
+$navbar-light-brand-hover-color: #fff;
+
+#search-bar {
+  .search-bar {
+    border-color: #555;
+    color: #fff;
+  }
+  .results {
+    color: #fff;
+    border-bottom: 1px solid black;
+  }
+}
+
+.navbar {
+  background-color: #111;
+}
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.homepage {
+  background-image: url(../src/img/controller.jpeg);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  h1 {
+    text-transform: capitalize;
+  }
+  .btn.commencer {
+    font-size: 1.5rem;
+  }
+}
+
+.dropdown-menu {
+  background-color: #111;
+  color: #ddd;
+}
+
+.dropdown-item:hover {
+  background-color: #333;
+  color: #ddd;
+}
+
+.dropdown-item {
+  color: #ddd;
+}
+
+button {
+  display: inline-block;
+}
+
+a {
+  color: #8f4dc7;
+}
+
+a:hover {
+  color: #8f4dc7;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.img-card {
+  height: 420px;
+}
+
+.time-played {
+  display: inline-block;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  border: 1px solid white;
+  background-color: white;
+  cursor: default;
+  color: black;
+}
+
+input .time-played {
+  width: 2px;
+}
+
+.card {
+  width: 24rem;
+}
+
+.add-games {
+  .btn {
+    display: inline-block;
+  }
+}
+
+.search-bar {
+  height: 2.5rem;
+  display: inline-block;
+}
+
+.profile-page {
+  h2 {
+    font-size: 50px;
+    border-bottom: 1px solid #8f4dc7;
+    margin-bottom: 5rem;
+  }
+  .number {
+    font-size: 70px;
+    font-weight: lighter;
+    display: block;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+.supp {
+  margin-top: 100px;
+}
