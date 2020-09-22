@@ -57,7 +57,7 @@ p.time-played:hover {
 
 @media (min-width: 768px) {
   .homepage {
-    background-image: url(../src/img/controller.jpeg);
+    background-image: url(img/controller.jpeg);
     background-position: center;
   }
   .w-md-75 {
