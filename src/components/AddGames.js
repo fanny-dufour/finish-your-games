@@ -162,7 +162,8 @@ export const AddGames = () => {
         start: new Date(),
       };
     }
-    let newGameKey = newGame.replace(/[.$[]]\/#/g, '');
+    let newGameKey = newGame.replace(/[.$[]]\/#]/g, '');
+    console.log(newGameKey);
     setGamesList({ ...games_list, [newGameKey]: gameToAdd });
     setAddedGames([...addedGames, newGame]);
     console.log(addedGames);
