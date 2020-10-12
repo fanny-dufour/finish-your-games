@@ -162,20 +162,24 @@ export const AddGames = () => {
         start: new Date(),
       };
     }
-    setGamesList({ ...games_list, [newGame]: gameToAdd });
+    let newGameKey = newGame.replace(/[.$[]]\/#/g, '');
+    setGamesList({ ...games_list, [newGameKey]: gameToAdd });
     setAddedGames([...addedGames, newGame]);
     console.log(addedGames);
     docRef
       .update({
         games_list: {
           ...games_list,
-          [newGame]: gameToAdd,
+          [newGameKey]: gameToAdd,
         },
       })
       .then(() => {
         setNewGame('');
         setGames({ ...INITIAL_STATE_GET_GAMES });
-      });
+      })
+      .catch((err) => {
+        console.error(err);
+      });;
   };
 
   return (
