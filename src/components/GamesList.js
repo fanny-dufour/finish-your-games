@@ -47,6 +47,7 @@ export const GamesList = () => {
   };
 
   const updateGamesList = (name, key, value) => {
+    name = name.replace(/[.$\[\]\/#]/g, '');
     let updatedGameList = {
       ...games_list,
       [name]: {
@@ -73,6 +74,7 @@ export const GamesList = () => {
   };
 
   const deleteGame = (id, name) => {
+    name = name.replace(/[.$\[\]\/#]/g, '');
     let gameToDelete = Object.keys(games_list).filter(
       (game) => games_list[game].id === id
     );
@@ -86,12 +88,13 @@ export const GamesList = () => {
   };
 
   const gameFinished = (id, name) => {
+    let nameKey = name.replace(/[.$\[\]\/#]/g, '');
     let date = new Date();
     const finishedGame = {
       name: name,
-      start: games_list[name].start,
+      start: games_list[nameKey].start,
       finished: firebase.firestore.Timestamp.fromDate(date),
-      timePlayed: games_list[name].timePlayed,
+      timePlayed: games_list[nameKey].timePlayed,
     };
     docRef
       .update({

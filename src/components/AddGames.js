@@ -163,7 +163,6 @@ export const AddGames = () => {
       };
     }
     let newGameKey = newGame.replace(/[.$\[\]\/#]/g, '');
-    console.log(newGameKey);
     setGamesList({ ...games_list, [newGameKey]: gameToAdd });
     setAddedGames([...addedGames, newGame]);
     console.log(addedGames);
